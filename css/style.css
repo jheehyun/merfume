@@ -1,1 +1,21 @@
 #wrapper{height: auto;}
+#wrapper>div{width: 100%; position: relative; margin-bottom: 120px;}
+.sec{width: 1260px; height: 100%; margin: 0 auto; position: relative;}
+/* 메인이미지 */
+#maincon{background: #dda;}
+    .coverBt{width: 100%; height: 100%; display: block;}
+/* 상품이미지 */
+#mainProduct{height: 1260px;}
+#mainProductSec{background: #ffa;}
+#mainProductSec>ul{display: flex; flex-wrap: wrap; justify-content: space-between; position: relative;}
+#mainProductSec>ul>li{width: 620px; height: 620px; background: #fef; position: relative;}
+#mainProductSec>ul>li:last-child{bottom: 0;}
+
+/* 공통배너 */
+#mainbanner{height: 450px; background: #BFFFE7;}
+
+/* 베스트셀러 */
+#bestseller{height: 560px;}
+    .con_title{font-size: 1.5em;}
+    .moreBt{position: relative; right: 0;}
+    .bestsell-wrap{width: 100%; display: flex;}
