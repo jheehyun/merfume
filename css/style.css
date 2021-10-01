@@ -3,19 +3,47 @@
 .sec{width: 1260px; height: 100%; margin: 0 auto; position: relative;}
 /* 메인이미지 */
 #maincon{background: #dda;}
+    .main_title{position: absolute; left: calc(50% - 91.365px); bottom: 20%; font-size: 2em; color:#fdfbf1 ; text-align: center; }
     .coverBt{width: 100%; height: 100%; display: block;}
+    .maindconBt{background: url(../imgs/pc/main1.jpg)no-repeat center center; background-size: cover;}
 /* 상품이미지 */
 #mainProduct{height: 1260px;}
-#mainProductSec{background: #ffa;}
-#mainProductSec>ul{display: flex; flex-wrap: wrap; justify-content: space-between; position: relative;}
+#mainProductSec>ul{display: flex; flex-wrap: wrap;  gap: 20px; position: relative;}
 #mainProductSec>ul>li{width: 620px; height: 620px; background: #fef; position: relative;}
 #mainProductSec>ul>li:last-child{bottom: 0;}
+#mainProductSec>ul>li:first-child>.mainProBt{background:url(../imgs/pc/forwomen.jpg) no-repeat center center; background-size: cover;}
+#mainProductSec>ul>li:nth-child(2)>.mainProBt{background:url(../imgs/pc/bamboo.jpg) no-repeat center center; background-size: cover;}
+#mainProductSec>ul>li:nth-child(3)>.mainProBt{background:url(../imgs/pc/leau.jpg) no-repeat center center; background-size: cover;}
+#mainProductSec>ul>li:last-child>.mainProBt{background:url(../imgs/pc/merfumeworld.jpg) no-repeat center center; background-size: cover;}
+    .mainProBt>.con_txt{text-align: center; color: #fdfbf1; font-size: 2em; position: absolute; bottom: 80px; left: 0; right: 0;}
 
-/* 공통배너 */
+/* 메인공통배너 */
 #mainbanner{height: 450px; background: #BFFFE7;}
+.mainbannerBt{background: url(../imgs/pc/ban02.jpg) no-repeat center center; background-size: cover;}
 
 /* 베스트셀러 */
-#bestseller{height: 560px;}
-    .con_title{font-size: 1.5em;}
-    .moreBt{position: relative; right: 0;}
-    .bestsell-wrap{width: 100%; display: flex;}
+#bestseller{height: auto;}
+    .bstxtwrap{width: 100%; display: flex; justify-content: space-between;}
+        .con_title{font-size: 1.5em;}
+        .moreBt{line-height: 27px;}
+    .bestsell-wrap{width: 100%; display: flex; margin-top: 80px; gap: 20px;}
+    .bestsell-wrap li{width: 300px; height: auto;}
+        .bsImg{width: 100%; height: 300px; background: #dd8; position: relative;}
+            .bsImgBt{position: absolute;}
+        .bsproduct-info{width: 100%; text-align: center;}    
+        .bsproduct-info>p{margin-bottom: 20px;}
+        .bsproduct-info>p>a{font-size: 16px;}
+            .bsCatname{font-size: 1.3em; margin: 40px 0; }
+            .productShopBt{border: 1px solid #000; display: block; width: 80%; padding: 10px 0; margin: 0 auto;}
+
+/* 중앙공통배너 */
+.combanner{height: 500px;}
+.combanner>section>ul{display: flex; width: 100%; height: 100%;justify-content: space-between;  flex-wrap: wrap; gap: 20px;}
+    .sec3>ul{gap: 20px;}
+    .conbnL{width: 960px; height: 100%; background: #cbbfff;}
+    .conbnS{width: 280px; height: 100%; background: #cbbfff;}
+    .sec4>ul>li{width: 400px; background: #000;}
+/* 맨아래 배너 */
+    .longBg{width: 100%; height: 180px; position: absolute; top: calc(50% - 90px); background: #fccaea;}
+    .con3MainBn{height: 100%; width: 1000px; background: #bfdfff; margin: 0 auto; position: relative;}
+
