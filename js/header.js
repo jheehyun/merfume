@@ -1,4 +1,5 @@
 var winH = window.innerHeight;
+var winW = window.innerWidth;
 lnbWrap = document.getElementById('header_lnb');
 lnbWrap.style.display = 'none';
 lnbMenu = document.getElementsByClassName('header_lnb_menu');
@@ -130,3 +131,5 @@ function LogbtLine(n){
     }
     logJoinBt[n].classList.add('btLine');
 }
+
+

@@ -1,0 +1,37 @@
+#wrapper>#shopmaincon{height: 500px; margin: 0;}
+.main_title.SubMaintitle{color: #FDFBF1; font-size: 4em; bottom:50%;}
+#shopmaincon>.main_title.SubMaintitle{font-size: 6em; bottom: 30%; color: #000;}
+#NewProd{height: 800px; margin-bottom: 20px;}
+/* newarrival */
+.NewmainProBt0{background: url(../../imgs/pc/daisy.jpg)no-repeat center center; background-size: cover;}
+.NewmainProBt1{background: url(../../imgs/pc/homme.jpg)no-repeat center center; background-size: cover;}
+.NewmainProBt2{background: url(../../imgs/pc/flowerbymerfume.jpg)no-repeat center center; background-size: cover;}
+.NewmainProBt3{background: url(../../imgs/pc/bath&body.jpg)no-repeat center center; background-size: cover;}
+.NewmainProBt4{background: url(../../imgs/pc/homefragrance.jpg)no-repeat center center; background-size: cover;}
+
+
+/* women */
+#maincon.womenmaincon>a.mainconBt{background: url(../../imgs/pc/perfumewomen.jpg)no-repeat 20% center; background-size: cover;}
+#mainProduct.WomenmainProduct{height: 1780px;}
+#mainProduct.WomenmainProduct>div>ul>li{height: 620px;}
+#mainProduct.WomenmainProduct>div>ul>li:last-child{width: 100%; height: 500px;}
+.WomainProBt0{background: url(../../imgs/pc/flowerbymerfume.jpg) no-repeat center center; background-size: cover;}
+.WomainProBt1{background: url(../../imgs/pc/leau.jpg) no-repeat center center; background-size: cover;}
+.WomainProBt2{background: url(../../imgs/pc/mfworld.jpg) no-repeat center center; background-size: cover;}
+.WomainProBt3{background: url(../../imgs/pc/daisy.jpg) no-repeat center center; background-size: cover;}
+.WomainProBt4{background: url(../../imgs/pc/sand.jpg) no-repeat center center; background-size: cover;}
+
+/* men */
+#maincon.Menmaincon>a.mainconBt{background: url(../../imgs/pc/men.jpg)no-repeat 20% center; background-size: cover;}
+.MenmainProBt0{background: url(../../imgs/pc/homme.jpg)no-repeat center center; background-size: cover;}
+.MenmainProBt1{background: url(../../imgs/pc/mfworld.jpg)no-repeat center center; background-size: cover;}
+.MenmainProBt2{background: url(../../imgs/pc/aurora.jpg)no-repeat center center; background-size: cover;}
+.MenmainProBt3{background: url(../../imgs/pc/sunset.jpg)no-repeat center center; background-size: cover;}
+/* bath&body */
+#maincon.Bathmaincon>a.mainconBt{background: url(../../imgs/pc/bath&body.jpg)no-repeat 20% center; background-size: cover;}
+#sub3conBox{height: 700px;}
+#sub3conBoxSe>ul{width: 100%; height: 100%; display: flex; gap: 20px;}
+.sub3conLi{width:33%; background: #fda; position: relative;}
+/* homefragrance */
+#maincon.Homemaincon>a.mainconBt{background: url(../../imgs/pc/homefg1.jpg)no-repeat center center; background-size: cover;}
+.HomesubconBt0{background: url(../../imgs/pc/btbdsub01.jpg)no-repeat center center; background-size: cover;}
