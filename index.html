@@ -673,7 +673,7 @@
                 </div><!--메인,서브 메뉴들-->
                 <div id="header_gnb_right_lnb" class="header_gnb_right_lnb">
                     <div id="hd_gnb_rightSearch" class="hd_gnb_right_menu">
-                        <input type="text" id="search" name="search"  placeholder="&nbsp;&nbsp;찾으시는 상품을 입력하여 주세요.">
+                        <input type="search" id="search" name="search"  placeholder="&nbsp;&nbsp;찾으시는 상품을 입력하여 주세요.">
                         <button type="button"  class="searchCloseBt" onclick="menuout();"><img src="imgs/icon/cancel.png" alt="cancel"></button>
                     </div>
 
@@ -695,10 +695,10 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <input type="text" id="userId" name="userId" placeholder="&nbsp;&nbsp;아이디">
+                                    <input type="text" id="userId" name="userId" placeholder="&nbsp;&nbsp;아이디" required minlength="6">
                                 </li>
                                 <li>
-                                    <input type="password" id="userPw" name="userPw" placeholder="&nbsp;&nbsp;비밀번호">
+                                    <input type="password" id="userPw" name="userPw" placeholder="&nbsp;&nbsp;비밀번호" required minlength="8" maxlength="16">
                                 </li>
                                 <li class="logCheck">
                                     <p>
@@ -768,7 +768,11 @@
                 <!-- 모바일 헤더 상단 -->
                 <ul class="mobile_header_wrap-ul">
                     <li>
-                        <div class="mobile_menu-btwrap"><button type="button" class="mobile_menu-bt " onclick="mobileMenuOpen();"></button></div>
+                        <div class="mobile_menu-btwrap">
+                            <button type="button" class="mobile_menu-bt " onclick="mobileMenuOpen();">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
                     </li>
                     <li>
                         <div id="mobile_logo" class="header_logo">
@@ -778,7 +782,7 @@
                     <li>
                         <ul class="mobile_gnb_icon_wrap">
                             <li><a href="javascript:" class="mobile_gnb_icon MsearchBt search coverBt" ></a></li>
-                            <li><a href="javascript:" class="mobile_gnb_icon bag coverBt"></a></li>
+                            <li><a href="javascript:" class="mobile_gnb_icon MbagBt bag coverBt"></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -788,7 +792,7 @@
                         <ul class="mobilemenu_top">
                             <li class="mobilemenu_space"></li>
                             <li class="mobilelogo-li"><a href="index.html" class="mobilelogoBt coverBt"></a></li>
-                            <li class="MobliecloseBt-li"><button class="MobliecloseBt" onclick="mobileMenuClose();"></button></li>
+                            <li class="MobliecloseBt-li"><button class="MobliecloseBt" onclick="mobileMenuClose();"><i class="fas fa-times"></i></button></li>
                         </ul>
                         <!-- 모바일 서브메뉴 -->
                         <ul class="mobilemenu_gnb_wrap" id="mobilemenu_gnb_wrap">
@@ -1161,15 +1165,37 @@
                         </ul>
                         <ul class="mobilemenu_bottom_wrap">
                             <li><a href="#" class="mbMenuBottomBt MsearchBt coverBt">검색하기</a></li>
-                            <li><a href="#" class="mbMenuBottomBt coverBt">로그인</a></li>
-                            <li><a href="#" class="mbMenuBottomBt coverBt">위시리스트</a></li>
-                            <li><a href="#" class="mbMenuBottomBt coverBt">장바구니</a></li>
+                            <li><a href="#" id="mLoginBt" class="mbMenuBottomBt coverBt">로그인</a></li>
+                            <li><a href="#" id="mWishBt" class="mbMenuBottomBt coverBt">위시리스트</a></li>
+                            <li><a href="#" class="mbMenuBottomBt MbagBt coverBt">장바구니</a></li>
                         </ul> <!--mobile 메뉴 하단 아이콘들-->
 
-                        
-                        <div id="mobileSearchmenu">
-
-                        </div> <!-- 모바일메뉴 하단 버튼 클릭시 나타나는 창 -->
+                        <div id="mobile_iconMenuWrap">
+                            <div id="mobileSearchmenu" class="mobile_iconMenu">
+                                <button type="button" class="iconBackBt">
+                                    <i class="fas fa-chevron-left"></i>&nbsp;&nbsp;뒤로가기
+                                </button>
+                            </div>
+                            <!--모바일 검색 아이콘 클릭시 활성화-->
+                            <div id="mobileLoginMenu" class="mobile_iconMenu">
+                                <button type="button" class="iconBackBt">
+                                    <i class="fas fa-chevron-left"></i>&nbsp;&nbsp;뒤로가기
+                                </button>
+                            </div>
+                            <!--모바일 로그인 아이콘 클릭시 활성화-->
+                            <div id="mobileWish" class="mobile_iconMenu">
+                                <button type="button" class="iconBackBt">
+                                    <i class="fas fa-chevron-left"></i>&nbsp;&nbsp;뒤로가기
+                                </button>
+                            </div>
+                            <!--모바일 위시리스트 아이콘 클릭시 활성화-->
+                            <div id="mobileBag" class="mobile_iconMenu">
+                                <button type="button" class="iconBackBt">
+                                    <i class="fas fa-chevron-left"></i>&nbsp;&nbsp;뒤로가기
+                                </button>
+                            </div>
+                            <!--모바일 장바구니 아이콘 클릭시 활성화-->
+                        </div><!-- 모바일메뉴 아이콘 버튼 클릭시 나타나는 창 -->
                     </div>
                 </div> <!--mobile menu 끝 -->
             </div>
