@@ -1,33 +1,17 @@
-var winH = window.innerHeight;
-var winW = window.innerWidth;
-lnbWrap = document.getElementById('header_lnb');
-lnbWrap.style.display = 'none';
-lnbMenu = document.getElementsByClassName('header_lnb_menu');
+const lnbWrap = document.getElementById('header_lnb');
+const lnbMenu = document.getElementsByClassName('header_lnb_menu');
 lnbMenu[0].style.display = 'none';
-lnb_sub_Wrap = document.getElementById('hdlnb_sub_ul-wrap');
-lnb_sub_Wrap.style.display = 'none';
-lnb_sub = document.getElementsByClassName('hdlnb_sub_ul');
-lnb_sub_Menus = lnb_sub_Wrap.children;
-lnb_sub_MenusLe = lnb_sub_Wrap.children.length;
-gnbWrap = document.getElementById('header_gnb_right_lnb');
-gnbWrap.style.display = 'none';
-gnbWrap.style.height = (winH - 100) + 'px';
-gnbSe = document.getElementById('hd_gnb_rightSearch');
-gnbSe.style.height = (winH * 0.5) + 'px';
-gnbSe.style.display = 'none';
-modalWrap = document.getElementById('header_modal_wrap');
-modalWrap.style.height = winH + 'px';
-modalWrap.style.display = 'none';
-gnbLog = document.getElementById('hd_gnb_login');
-gnbLog.style.display = 'none';
-gnbLog.style.height = winH + 'px';
-logJoinBt = document.getElementsByClassName('Logbts');
-gnbWish = document.getElementById('hd_gnb_wish');
-gnbWish.style.display = 'none';
-gnbWish.style.height = winH + 'px';
-gnbBag = document.getElementById('hd_gnb_bag');
-gnbBag.style.display = 'none';
-gnbBag.style.height = winH + 'px';
+const lnb_sub_Wrap = document.getElementById('hdlnb_sub_ul-wrap');
+const lnb_sub = document.getElementsByClassName('hdlnb_sub_ul');
+const lnb_sub_Menus = lnb_sub_Wrap.children;
+const lnb_sub_MenusLe = lnb_sub_Wrap.children.length;
+const gnbWrap = document.getElementById('header_gnb_right_lnb');
+const gnbSe = document.getElementById('hd_gnb_rightSearch');
+const modalWrap = document.getElementById('header_modal_wrap');
+const gnbLog = document.getElementById('hd_gnb_login');
+const logJoinBt = document.getElementsByClassName('Logbts');
+const gnbWish = document.getElementById('hd_gnb_wish');
+const gnbBag = document.getElementById('hd_gnb_bag');
 
 // 쇼핑하기 메뉴열기
 function subMenuopen(n){
@@ -39,7 +23,6 @@ function subMenuopen(n){
         lnb_sub_Menus[i].style.display = 'none'
     }
     lnb_sub_Menus[n].style.display = 'block';
-    lnb_sub[n].style.height = (winH * 0.7) + 'px';
 }
 
 // 선물하기
@@ -51,7 +34,6 @@ function sub2Menuopen(){
         lnb_sub_Menus[i].style.display = 'none';
     }
     lnb_sub_Menus[lnb_sub_MenusLe-3].style.display = 'block';
-    lnb_sub[lnb_sub_MenusLe-3].style.height = (winH * 0.7) + 'px';
 }
 // 스토어
 function sub3Menuopen(){
@@ -62,7 +44,6 @@ function sub3Menuopen(){
         lnb_sub_Menus[i].style.display = 'none';
     }
     lnb_sub_Menus[lnb_sub_MenusLe-2].style.display = 'block';
-    lnb_sub[lnb_sub_MenusLe-2].style.height = (winH * 0.7) + 'px';
 }
 // 머퓸하우스
 function sub4Menuopen(){
@@ -73,7 +54,6 @@ function sub4Menuopen(){
         lnb_sub_Menus[i].style.display = 'none';
     }
     lnb_sub_Menus[lnb_sub_MenusLe-1].style.display = 'block';
-    lnb_sub[lnb_sub_MenusLe-1].style.height = (winH * 0.7) + 'px';
 }
 function menuout(){
     lnbWrap.style.display = 'none';
@@ -131,5 +111,4 @@ function LogbtLine(n){
     }
     logJoinBt[n].classList.add('btLine');
 }
-
 

@@ -1,5 +1,6 @@
+
 #wrapper>#shopmaincon{height: 500px; margin: 0;}
-.main_title.SubMaintitle{color: #FDFBF1; font-size: 4em; bottom:50%;}
+.main_title.SubMaintitle{color: var(--main-color); font-size: 4em; bottom:50%;}
 #shopmaincon>.main_title.SubMaintitle{font-size: 6em; bottom: 30%; color: #000;}
 #NewProd{height: 800px; margin-bottom: 20px;}
 /* newarrival */

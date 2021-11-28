@@ -1,11 +1,5 @@
 var winH = window.innerHeight;
-// 첫번째 메인콘텐츠 높이 설정
-const maincon = document.getElementById('maincon');
-maincon.style.height = (winH - 100)  + 'px'
-if(window.innerWidth<1024){
-    maincon.style.height = (winH - 64)  + 'px'
 
-}
 
 // 메인 상품 너비,높이 설정
 
@@ -18,6 +12,7 @@ let mainProductLiWidth = mainProductLi[0].clientWidth;
 mainProductLiHeight();
 function mainProductLiHeight(){
     for (i = 0; i < mainProductLi.length; i++) {
+        let mainProductLiWidth = mainProductLi[0].clientWidth;
         mainProductLi[i].style.height = mainProductLiWidth  + 'px';
     }
 }
@@ -52,7 +47,6 @@ function bestsellSlide(n){
         for (let i = 0; i < bsLi.length; i++) {
             bsLi[i].style.display = 'block';
         }
-        
     }
     else{
         
@@ -73,31 +67,6 @@ function PrevNext(n){
     bestsellSlide(sl+=n);
 }
 
-// 공통영역 배너 리사이즈 
-const comBnLI = document.getElementsByClassName('comBnLI');
-const combanner = document.getElementsByClassName('combanner');
-combannerMoblieWidth();
-function combannerMoblieWidth(){
-    for (let i = 0; i < comBnLI.length; i++) {
-        if(window.innerWidth<1260){
-            comBnLI[i].style.height = winH + 'px';
-        }        
-    }
-    if(window.innerWidth>1260){
-        combanner[0].style.height = 500 + 'px';
-        combanner[1].style.height = 500 + 'px';
-        combanner[2].style.height = 500 + 'px';
-    }
-    else if(window.innerWidth<1260){
-        combanner[0].style.height = winH + 'px';
-        combanner[1].style.height = winH*3 + 'px';
-        combanner[2].style.height = (winH * 0.8) + 'px';
-    }
-    else if(window.innerWidth<1024){
-        combanner[0].style.height = winH*2 + 'px';
-        combanner[1].style.height = winH*3 + 'px';
-    }
-}
 
 
 

@@ -1,11 +1,8 @@
-var winH = window.innerHeight;
 // 모바일 로그인영역
 const mobile_menu = document.getElementById('mobile_menu');
 const mobilemenu_gnb_wrap = document.getElementById('mobilemenu_gnb_wrap');
-const mobileSearchmenu = document.getElementById('mobileSearchmenu');
-const MsearchBt = document.getElementsByClassName('MsearchBt');
 const mobile_sub_wrap = document.querySelectorAll('.mobile_sub_wrap');
-mobile_menu.style.height = winH + 'px';
+// mobile_menu.style.height = winH + 'px';
 // mobilemenu_gnb_wrap.style.height = (winH - 134) + 'px';
 mobileMenuClose();
 
@@ -84,13 +81,75 @@ $(function(){
       });
     });
 });
+
+// 모바일 메뉴 닫기
 function mobileMenuClose(){
-    mobile_menu.style.display = 'none';
+  mobile_menu.style.display = 'none';
+  MIconAllClose();
 }
 
 // 모바일 검색아이콘 클릭시 검색메뉴 활성화 
-function MsearchClick(e){
+const mobile_iconMenuWrap = document.getElementById('mobile_iconMenuWrap');
+const mobileSearchmenu = document.getElementById('mobileSearchmenu');
+const MsearchBt = document.querySelectorAll('.MsearchBt');
+function MsearchOpen(e){
   e.preventDefault();
+  MIconAllClose();
+  mobileMenuOpen();
+  mobile_iconMenuWrap.style.display = "block";
   mobileSearchmenu.style.display = 'block';
 }
-MsearchBt[0].addEventListener('click',MsearchClick);
+for (let i = 0; i < MsearchBt.length; i++) {
+  MsearchBt[i].addEventListener('click',MsearchOpen);  
+}
+
+// 모바일 로그인 버튼 클릭시 로그인 메뉴 활성화 
+const mobileLoginMenu = document.getElementById("mobileLoginMenu");
+const mLoginBt = document.getElementById("mLoginBt");
+function MLogOpen(e){
+  e.preventDefault();
+  MIconAllClose();
+  mobileMenuOpen();
+  mobile_iconMenuWrap.style.display = "block";
+  mobileLoginMenu.style.display = "block";
+}
+mLoginBt.addEventListener("click",MLogOpen);
+
+// 모바일 위시리스트 클릭시 위시리스트 활성화 
+const mobileWish = document.getElementById("mobileWish");
+const mWishBt = document.getElementById("mWishBt");
+function MWishOpen(e){
+  e.preventDefault();
+  MIconAllClose();
+  mobileMenuOpen();
+  mobile_iconMenuWrap.style.display = "block";
+  mobileWish.style.display = "block";
+}
+mWishBt.addEventListener("click",MWishOpen);
+
+// 모바일 장바구니 버튼 클릭시 장바구니 활성화
+const mobileBag = document.getElementById("mobileBag");
+const MbagBt = document.querySelectorAll('.MbagBt');
+function MBagOpen(){
+  MIconAllClose();
+  mobileMenuOpen();
+  mobile_iconMenuWrap.style.display = "block";
+  mobileBag.style.display = "block";
+}
+for (let i = 0; i < MbagBt.length; i++) {
+  MbagBt[i].addEventListener("click",MBagOpen); 
+}
+
+// 아이콘 메뉴 닫기 
+function MIconAllClose(){
+  const mobile_iconMenuWrap = document.getElementById('mobile_iconMenuWrap');
+  const mobileSearchmenu = document.getElementById('mobileSearchmenu');
+  const mobileLoginMenu = document.getElementById("mobileLoginMenu");
+  const mobileWish = document.getElementById("mobileWish");
+  const mobileBag = document.getElementById("mobileBag");
+  mobile_iconMenuWrap.style.display = "none";
+  mobileSearchmenu.style.display = 'none';
+  mobileLoginMenu.style.display = "none";
+  mobileWish.style.display = 'none';
+  mobileBag.style.display = 'none';
+}
